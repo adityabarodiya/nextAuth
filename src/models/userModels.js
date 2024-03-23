@@ -1,5 +1,4 @@
 import  mongoose  from "mongoose";
-import { unique } from "next/dist/build/utils";
 
 const user = new mongoose.Schema({
     username: {
@@ -24,5 +23,8 @@ const user = new mongoose.Schema({
     verifyToken: String,
     verifyTokenExpiration: Date,
     
-}) 
+})
+
+export default mongoose.model('User', user);
+
 
